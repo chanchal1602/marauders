@@ -1,7 +1,9 @@
 # import pyfiglet
+import time
 import os
 import requests
 # Add your API keys here
+# google maps api keys
 SHODAN_API_KEY = "bm2DmZaQIEw5oXcOVx4qy3HPXF5PrjZi"
 ONYPHE_API_KEY = "YOUR_ONYPHE_API_KEY"
 WIGLE_API_KEY = "YOUR_WIGLE_API_KEY"
