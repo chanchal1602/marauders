@@ -1,6 +1,7 @@
 # import pyfiglet
 #! usr/bin/env python
 import time
+import scripts
 import subprocess
 import os
 import requests
@@ -88,21 +89,21 @@ def information_gathering():
         os.system('clear')
         Server_lookup()
     elif choice == "2":
-
-        print("")
-    elif choice == "2":
-        print("")
-    elif choice == "2":
-        print("")
-    elif choice == "2":
-        print("")
+        print("mac address changer")
+    elif choice == "3":
+        print("google dorks")
+        dorking.dorks()
+    elif choice == "4":
+        print("email harvesting")
+    elif choice == "5":
+        print("certificates search")
     elif choice == "0":
         return
 
 def Server_lookup():
     site=input("[+]Enter the name of target:")
     os.system('whois '+site)
-def 
+
 if __name__ == "__main__":
     Mylogo()
     Mainpage()
