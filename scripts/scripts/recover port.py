@@ -1,9 +1,3 @@
-
-
-
-
-
-
 # functions starts here------------------------------
 
   ##infomration gathering

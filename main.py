@@ -41,9 +41,9 @@ def Mainpage():
     [2] Scanning
     [3] Password Attacks
     [4] Exploitation
-    [5] Post-Exploitation
-    [6] Sniffing and Spoofing
-    [7] Web Hacking
+    [5] Sniffing and Spoofing
+    [6] OWASP Top 10
+    [7] Other Attack surface
     [8] Report
     [9] Install/ Update
     [0] Exit
@@ -54,20 +54,34 @@ def Mainpage():
         os.system('clear')
         information_gathering()
     elif choice == "2":
-        print("Scanning Phase under construction")
-    elif choice == "2":
+        print("Scanning")
+        os.system('clear')
+        scanning()
+    elif choice == "3":
         print("password attacks")
-    elif choice == "2":
+        os.system('clear')
+        password_attack()
+    elif choice == "4":
         print("Exploitation")
-    elif choice == "2":
-        print("post Exploitation")
-    elif choice == "2":
-        print("sniffing and spoofing")
-    elif choice == "2":
-        print("web hacking")
-    elif choice == "2":
+        os.system('clear')
+        exploitation()
+    elif choice == "5":
+        print("Sniffing and Spoofing")
+        os.system('clear')
+        sniff_spoof()
+    elif choice == "6":
+        print("OWASP Top 10")
+        os.system('clear')
+        owasp_top_10()
+    elif choice == "7":
+        print("Other Attack Surface")
+        os.system('clear')
+        attack_surface()
+    elif choice == "8":
         print("report")
-    elif choice == "2":
+        os.system('clear')
+        #implemented for future scope!!!!!
+    elif choice == "9":
         print("install/ update")
     elif choice == "0":
         print("Exiting...")
