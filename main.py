@@ -4,23 +4,18 @@ import time
 import scripts
 import subprocess
 import os
-#import requests
-# Add your API keys here
-# google maps api keyscc
-SHODAN_API_KEY = "bm2DmZaQIEw5oXcOVx4qy3HPXF5PrjZi"
-ONYPHE_API_KEY = "YOUR_ONYPHE_API_KEY"
-WIGLE_API_KEY = "YOUR_WIGLE_API_KEY"
-GOOGLE_API_KEY = "YOUR_GOOGLE_API_KEY"
-GREP_APP_API_KEY = "YOUR_GREP_APP_API_KEY"
-SEARCHCODE_API_KEY = "YOUR_SEARCHCODE_API_KEY"
-PUBLICWWW_API_KEY = "YOUR_PUBLICWWW_API_KEY"
-INTELX_API_KEY = "YOUR_INTELX_API_KEY"
-HUNTER_API_KEY = "YOUR_HUNTER_API_KEY"
-BINARYEDGE_API_KEY = "YOUR_BINARYEDGE_API_KEY"
-FULLHUNT_API_KEY = "YOUR_FULLHUNT_API_KEY"
-NELAS_API_KEY = "YOUR_NELAS_API_KEY"
-# Add other API keys here as needed
+#importing files 
+from scripts.infogather import infogather_menu
+from scripts.exploitation import exploitation_menu
+from scripts.otherattacks import otherattacks_menu
+from scripts.owasp10 import owasp_menu
+from scripts.passattacks import password_menu
+from scripts.sniffspoof import sniffspoof_menu
 
+#import requests
+# comment for me Add other API keys here as needed
+
+#----------
 def Mylogo():
     print('''\033[1;32;40m                                                         ██
                                                         ░██
@@ -48,31 +43,29 @@ def Mainpage():
     [9] Install/ Update
     [0] Exit
     ''')
+    choice =0
     choice=input("[+]Choose:")
 
     if choice == "1":
         os.system('clear')
-        information_gathering()
+        infogather_menu()
     elif choice == "2":
-        print("Scanning")
         os.system('clear')
-        scanning()
     elif choice == "3":
         print("password attacks")
         os.system('clear')
-        password_attack()
+        password_menu()
     elif choice == "4":
-        print("Exploitation")
         os.system('clear')
-        exploitation()
+        exploitation_menu()
     elif choice == "5":
         print("Sniffing and Spoofing")
         os.system('clear')
-        sniff_spoof()
+        sniffspoof_menu()
     elif choice == "6":
         print("OWASP Top 10")
         os.system('clear')
-        owasp_top_10()
+        owasp_menu()
     elif choice == "7":
         print("Other Attack Surface")
         os.system('clear')
@@ -88,37 +81,10 @@ def Mainpage():
         return
     else:
         print("Invalid choice. Please select a valid option.")
-
-def information_gathering():
-    print('''
-    [1] Server lookups
-    [2] MAC Address Changer
-    [3] Google Dorks
-    [4] Email Harvesting
-    [5] Certificates search
-    [0] Exit
-    ''')
-    choice=input("[+]Choose:")
-    if choice == "1":
-        os.system('clear')
-        Server_lookup()
-    elif choice == "2":
-        print("mac address changer")
-    elif choice == "3":
-        print("google dorks")
-        dorking.dorks()
-    elif choice == "4":
-        print("email harvesting")
-    elif choice == "5":
-        print("certificates search")
-    elif choice == "0":
-        return
-
-def Server_lookup():
-    site=input("[+]Enter the name of target:")
-    os.system('whois '+site)
-
-if __name__ == "__main__":
+        
+def marauder():
     os.system("clear")
     Mylogo()
     Mainpage()
+if __name__ == "__main__":
+    marauder()
