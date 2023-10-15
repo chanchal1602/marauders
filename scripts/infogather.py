@@ -58,7 +58,7 @@ def ip_address_and_hosts():
 
 
 if __name__ == "__main__":
-    infogather()
+    main_menu()
     import whois
 
     def get_domain_info(domain_name):

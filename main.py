@@ -4,7 +4,7 @@ import time
 import scripts
 import subprocess
 import os
-import requests
+#import requests
 # Add your API keys here
 # google maps api keyscc
 SHODAN_API_KEY = "bm2DmZaQIEw5oXcOVx4qy3HPXF5PrjZi"
@@ -119,5 +119,6 @@ def Server_lookup():
     os.system('whois '+site)
 
 if __name__ == "__main__":
+    os.system("clear")
     Mylogo()
     Mainpage()
