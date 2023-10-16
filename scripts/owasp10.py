@@ -27,7 +27,7 @@ def main_menu():
     [99] Back
     [0] Exit
     ''')
-def menu():
+def owasp_menu():
     main_menu()
     choice=input("[+]Choose:")
     if choice == "1":
@@ -48,7 +48,7 @@ def menu():
     else:
         print("Invalid choice. Please select a valid option.")
 if __name__ == "__main__":
-    menu()
+    owasp_menu()
 
 
 

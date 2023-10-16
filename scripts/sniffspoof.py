@@ -19,7 +19,7 @@ def main_menu():
     [9] Back
     [0] Exit
     ''')
-def menu():
+def sniffspoof_menu():
     main_menu()
     choice=input("[+]Choose:")
     if choice == "1":
@@ -40,7 +40,7 @@ def menu():
     else:
         print("Invalid choice. Please select a valid option.")
 if __name__ == "__main__":
-    menu()
+    sniffspoof_menu()
 
 
 

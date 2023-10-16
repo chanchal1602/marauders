@@ -18,7 +18,7 @@ def main_menu():
     [9] Back
     [0] Exit
     ''')
-def menu():
+def otherattacks_menu():
     main_menu()
     choice=input("[+]Choose:")
     if choice == "1":
@@ -37,7 +37,7 @@ def menu():
     else:
         print("Invalid choice. Please select a valid option.")
 if __name__ == "__main__":
-    menu()
+    othrattacks_menu()
 
 
 
