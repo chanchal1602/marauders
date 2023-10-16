@@ -2,6 +2,7 @@ import os
 import subprocess
 import socket
 import sys
+import base64
 import time
 import whois
 # from __future__ import print_function
@@ -121,10 +122,55 @@ def cryptography_menu():
     [4] Decode
     [0] Exit 
     ''')
+    choice=input("[+]Choose:")
+    if choice == "3":
+        os.system('clear')
+        logo()
+        print('''
+    [1] base64
+    [9] back
+    [0] Exit 
+    ''')
+        choice=input("[+]Choose:")
+        if choice == "1":
+            e_base64()
+        elif choice == "0":
+            return
+    elif choice == "4":
+        print('''
+    [1] base64
+    [9] back
+    [0] Exit 
+    ''')
+        choice=input("[+]Choose:")
+        if choice == "1":
+            d_base64()
+        elif choice == "0":
+            return
+    elif choice == "0":
+        return
+    else:
+        print("You entered invalid choice!!!!!!!!!!!")
 # menu ends-----------------------------------------------------------
 
 # functions for scripts starts here-----------------------------------
+    # cryptography script starts here---------------------------------
+def encode_base64(text):
+    encoded_text = base64.b64encode(text.encode("utf-8"))
+    return encoded_text.decode("utf-8")
+def decode_base64(encoded_text):
+    decoded_text = base64.b64decode(encoded_text.encode("utf-8"))
+    return decoded_text.decode("utf-8")
+def e_base64():
+    text =input("Enter the text: ")
+    encoded_text = encode_base64(text)
+    print("Encoded text:", encoded_text)
 
+def d_base64():
+    text =input("Enter the text: ")
+    decoded_text = decode_base64(text)
+    print("Decoded text:", decoded_text)
+    
     # functions for domain information-----------------------------------
 def get_domain_info(domain_name):
     try:
