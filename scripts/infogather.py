@@ -76,19 +76,19 @@ def port_scanning_menu():
     if choice == "1":
         os.system('clear')
         logo()
-        nmap_sn()
+        nmap_sn() #ping scan
     elif choice == "2":
         os.system('clear')
         logo()
-        nmap_1000()
+        nmap_1000() # top 1000 ports scan 
     elif choice == "3":
         os.system('clear')
         logo()
-        nmap_sC()
+        nmap_sC()   # script scan
     elif choice == "4":
         os.system('clear')
         logo()
-        nmap_sV()
+        nmap_sV()  #service version
     elif choice == "5":
         os.system('clear')
     elif choice == "6":
@@ -96,7 +96,7 @@ def port_scanning_menu():
     elif choice == "7":
         os.system('clear')
         logo()
-        nmap_o()
+        nmap_o()   #operating system scan
     elif choice == "8":
         os.system('clear')
     elif choice == "0":
@@ -331,4 +331,4 @@ if __name__ == "__main__":
     infogather_menu()
 
 
-
+    

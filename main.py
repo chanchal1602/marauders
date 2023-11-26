@@ -33,14 +33,12 @@ def Mylogo():
 def Mainpage():
     print('''
     [1] Information Gathering
-    [2] Scanning
-    [3] Password Attacks
-    [4] Exploitation
-    [5] Sniffing and Spoofing
-    [6] OWASP Top 10
-    [7] Other Attack surface
-    [8] Report
-    [9] Install/ Update
+    [2] Password Attacks
+    [3] Exploitation
+    [4] Sniffing and Spoofing
+    [5] OWASP Top 10
+    [6] Other Attack surface
+    [7] Install/ Update
     [0] Exit
     ''')
     choice =0
@@ -50,32 +48,27 @@ def Mainpage():
         os.system('clear')
         infogather_menu()
     elif choice == "2":
-        os.system('clear')
-    elif choice == "3":
         print("password attacks")
         os.system('clear')
         password_menu()
-    elif choice == "4":
+    elif choice == "3":
         os.system('clear')
         exploitation_menu()
-    elif choice == "5":
+    elif choice == "4":
         print("Sniffing and Spoofing")
         os.system('clear')
         sniffspoof_menu()
-    elif choice == "6":
+    elif choice == "5":
         print("OWASP Top 10")
         os.system('clear')
         owasp_menu()
-    elif choice == "7":
+    elif choice == "6":
         print("Other Attack Surface")
         os.system('clear')
-        attack_surface()
-    elif choice == "8":
-        print("report")
+        otherattacks_menu()
+    elif choice == "7":
         os.system('clear')
-        #implemented for future scope!!!!!
-    elif choice == "9":
-        print("install/ update")
+        print("install/update")
     elif choice == "0":
         print("Exiting...")
         return
