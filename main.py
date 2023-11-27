@@ -11,7 +11,7 @@ from scripts.otherattacks import otherattacks_menu
 from scripts.owasp10 import owasp_menu
 from scripts.passattacks import password_menu
 from scripts.sniffspoof import sniffspoof_menu
-
+from scripts.miscellaneous import miscellaneous_menu
 #import requests
 # comment for me Add other API keys here as needed
 
@@ -37,7 +37,7 @@ def Mainpage():
     [3] Exploitation
     [4] Sniffing and Spoofing
     [5] OWASP Top 10
-    [6] Other Attack surface
+    [6] miscellaneous
     [7] Install/ Update
     [0] Exit
     ''')
@@ -63,12 +63,13 @@ def Mainpage():
         os.system('clear')
         owasp_menu()
     elif choice == "6":
-        print("Other Attack Surface")
+        print(" miscellaneous")
         os.system('clear')
-        otherattacks_menu()
+         miscellaneous_menu()
     elif choice == "7":
         os.system('clear')
         print("install/update")
+        #print('https://github.com/owasp-amass/amass/blob/master/doc/tutorial.md')
     elif choice == "0":
         print("Exiting...")
         return

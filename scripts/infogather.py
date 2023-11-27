@@ -171,6 +171,17 @@ def d_base64():
     decoded_text = decode_base64(text)
     print("Decoded text:", decoded_text)
     
+    # function for website information-----------------------------------
+def execute_whatweb(url):
+    try:
+        # Use the subprocess module to execute the whatweb command
+        subprocess.call(["whatweb", url])
+    except Exception as e:
+        print("Error executing whatweb command:", e)
+def tech_stack_info():
+    url = input("Enter the URL: ")
+    execute_whatweb(url)
+    
     # functions for domain information-----------------------------------
 def get_domain_info(domain_name):
     try:
@@ -189,6 +200,7 @@ def convert_ip_to_hostname(ip_address):
     return hostname
   except socket.gaierror:
     return None
+    
 
 def ip_to_host():
   ip_address = input("Enter an IP address: ")
@@ -300,6 +312,7 @@ def infogather_menu():
     elif choice == "3":
         os.system('clear')
         logo()
+        tech_stack_info()
     elif choice == "4":
         os.system('clear')
         logo()
