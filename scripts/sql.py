@@ -8,9 +8,9 @@ import requests
 import string
 
 from huepy import *
-from core import requester
-from core import extractor
-from core import crawler
+from sql_requester import *
+from sql_extractor import * 
+from sql_crawler import  *
 from urllib.parse import unquote
 from tqdm import tqdm 
 

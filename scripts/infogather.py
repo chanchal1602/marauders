@@ -332,6 +332,7 @@ def infogather_menu():
         cryptography_menu()
     elif choice == "9":
         os.system('clear')
+        infogather_menu()
     elif choice == "0":
         print("Exiting...")
         return

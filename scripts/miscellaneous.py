@@ -12,7 +12,7 @@ def logo():
      \___/ \__|_| |_|\___|_|     \__,_|\__|\__\__,_|\___|_|\_\___/
     ''')
 # menu------------------------------------------------------------
-def main_menu():
+def miscellaneous_menu():
     os.system("clear")
     logo()
     print('''
@@ -70,7 +70,7 @@ def otherattacks_menu():
     else:
         print("Invalid choice. Please select a valid option.")
 if __name__ == "__main__":
-     main_menu()
+     miscellaneous_menu()
 
 
 

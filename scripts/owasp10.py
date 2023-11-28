@@ -1,4 +1,7 @@
 import os
+from scripts.rxss import xssmain
+from scripts.lfi import entryy
+from scripts.owaspquick import quick_scan
 def logo():
     print('''
                                 _                _  ___  
@@ -16,14 +19,8 @@ def main_menu():
     print('''
     [1] XSS attack
     [2] SQL Injection
-    [3] SSRF
-    [4] Cryptographic Failure
-    [5] Broken Access Control
-    [6]
-    [7]
-    [8]
-    [9]
-    [10]
+    [3] Local File Inclusion
+    [4] owasp quick scan
     [99] Back
     [0] Exit
     ''')
@@ -32,21 +29,25 @@ def owasp_menu():
     choice=input("[+]Choose:")
     if choice == "1":
         os.system('clear')
+        logo()
+        xssmain()
     elif choice == "2":
         os.system('clear')
         logo()
     elif choice == "3":
         os.system('clear')
         logo()
+        entryy()
     elif choice == "4":
         os.system('clear')
-    elif choice == "9":
-        os.system('clear')
+        logo()
+        quick_scan()
     elif choice == "0":
         print("Exiting...")
         return
     else:
         print("Invalid choice. Please select a valid option.")
+        
 if __name__ == "__main__":
     owasp_menu()
 
