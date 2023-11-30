@@ -9,7 +9,9 @@ def logo():
       ___ | |_| |__   ___ _ __    __ _| |_| |_ __ _  ___| | _____ 
      / _ \| __| '_ \ / _ \ '__|  / _` | __| __/ _` |/ __| |/ / __|
     | (_) | |_| | | |  __/ |    | (_| | |_| || (_| | (__|   <\__ \
+    
      \___/ \__|_| |_|\___|_|     \__,_|\__|\__\__,_|\___|_|\_\___/
+     
     ''')
 # menu------------------------------------------------------------
 def miscellaneous_menu():
@@ -18,7 +20,6 @@ def miscellaneous_menu():
     print('''
     [1] Check File Type
     [2] robots.txt
-    [3] 
     [9] Back
     [0] Exit
     ''')
@@ -59,9 +60,6 @@ def otherattacks_menu():
         os.system('clear')
         logo()
         robots()
-    elif choice == "3":
-        os.system('clear')
-        logo()
     elif choice == "9":
         os.system('clear')
     elif choice == "0":

@@ -46,8 +46,7 @@ def main_menu():
     logo()
     print('''
     [1] Password Attacks
-    [2] Wordlist
-    [3] Admin page finder
+    [2] Admin page finder
     [9] Back
     [0] Exit
     ''')
@@ -61,33 +60,7 @@ def password_menu():
     elif choice == "2":
         os.system('clear')
         logo()
-        wordlist_menu()
-    elif choice == "3":
-        os.system('clear')
-        logo()
         admin_main()
-    elif choice == "9":
-        os.system('clear')
-    elif choice == "0":
-        print("Exiting...")
-        return
-    else:
-        print("Invalid choice. Please select a valid option.")
-def wordlist_menu():   
-    print('''
-    [1] Crunch
-    [2] Seclist(already created)
-    [3] rockyou(already created)
-    [4] CUPP
-    [9] Back
-    [0] Exit
-    ''')
-    choice=input("[+]Choose:")
-    if choice == "1":
-        os.system('clear')
-    elif choice == "2":
-        os.system('clear')
-        logo()
     elif choice == "9":
         os.system('clear')
     elif choice == "0":
@@ -101,7 +74,7 @@ def attacks_menu():
     [1] Rainbow table
     [2] web app form bruteforce
     [3] ftp anonymous login
-    [4] web app
+    [4] ssh brute
     [9] Back
     [0] Exit
     ''')
@@ -115,6 +88,8 @@ def attacks_menu():
         os.system('clear')
         logo()
         ftp_anon()
+    elif choice == "4":
+        logo()
     elif choice == "9":
         os.system('clear')
     elif choice == "0":

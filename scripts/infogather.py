@@ -6,6 +6,7 @@ import base64
 import time
 import whois
 # from __future__ import print_function
+#from scripts.subdomainenum import subdomain_enum
 def logo():
     print('''
          _        __                            _   _             
@@ -294,7 +295,17 @@ def nmap_o():
   # Print the output to the console.
   print(output)
 
+def subdomain_enum():
+    domain_name = input("Enter domain name: ")
+    command = ["amass", "enum", "-passive", "-d", domain_name]
 
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = process.communicate()
+
+    if stderr:
+        print("Error:", stderr.decode("utf-8"))
+    else:
+        print(stdout.decode("utf-8"))
 
 
 #elif ladder for showing the root menu page------------------------------------
@@ -316,6 +327,7 @@ def infogather_menu():
     elif choice == "4":
         os.system('clear')
         logo()
+        subdomain_enum()
     elif choice == "5":
         os.system('clear')
         logo()

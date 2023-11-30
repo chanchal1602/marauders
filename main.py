@@ -34,11 +34,9 @@ def Mainpage():
     print('''
     [1] Information Gathering
     [2] Password Attacks
-    [3] Exploitation
-    [4] Web attacks
-    [5] OWASP Top 10
-    [6] miscellaneous
-    [7] Install/ Update
+    [3] Web attacks
+    [4] OWASP Top 10
+    [5] miscellaneous
     [0] Exit
     ''')
     choice =0
@@ -52,23 +50,17 @@ def Mainpage():
         os.system('clear')
         password_menu()
     elif choice == "3":
-        os.system('clear')
-        exploitation_menu()
-    elif choice == "4":
         print("Web Attack Tools")
         os.system('clear')
         web_attack_menu()
-    elif choice == "5":
+    elif choice == "4":
         print("OWASP Top 10")
         os.system('clear')
         owasp_menu()
-    elif choice == "6":
+    elif choice == "5":
         print(" miscellaneous")
         os.system('clear')
         miscellaneous_menu()
-    elif choice == "7":
-        os.system('clear')
-        print("install/update")
         #print('https://github.com/owasp-amass/amass/blob/master/doc/tutorial.md')
     elif choice == "0":
         print("Exiting...")
